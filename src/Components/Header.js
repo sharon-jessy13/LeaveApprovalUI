@@ -93,7 +93,7 @@ export default function Header() {
                 <div className="balance-overview-header">
                     <div className="balance-overview-title">
                         <img src={Clip} className='Leave-Clip-icon' alt="Balance Overview Icon" />
-                        <h6>Leave Balance Overview</h6>
+                        <h2>Leave Balance Overview</h2>
                         <img src={info} className='Leave-info-icon' alt="Information Icon" />
                     </div>
                     <div className="financial-year-selector">
@@ -116,16 +116,38 @@ export default function Header() {
                 </div>
 
                 <div className="leave-cards">
-                    <div className="card cl">Casual Leave (CL)<br />5 days</div>
-                    <div className="card sl">Service Leave (SL)<br />5 days</div>
-                    <div className="card pl">Privilege Leave (PL)<br />0 days</div>
-                    <div className="card wfh">Additional WFH<br />12 days</div>
-                    <div className="card long-sl">Long Service Leave<br />5 days</div>
-                    <div className="card extra-sl">Service Leave (PL)<br />12 days</div>
-                    <div className="card maternity">Maternity Leave<br />182 days
+                    <div className="card cl">
+                        <span className="card-title">Casual Leave (CL)</span>
+                        <span className="card-days">5 days</span>
+                    </div>
+                    <div className="card sl">
+                        <span className="card-title">Service Leave (SL)</span>
+                        <span className="card-days">5 days</span>
+                    </div>
+                    <div className="card pl">
+                        <span className="card-title">Privilege Leave (PL)</span>
+                        <span className="card-days">0 days</span>
+                    </div>
+                    <div className="card wfh">
+                        <span className="card-title">Additional WFH</span>
+                        <span className="card-days">12 days</span>
+                    </div>
+                    <div className="card long-sl">
+                        <span className="card-title">Long Service Leave</span>
+                        <span className="card-days">5 days</span>
+                    </div>
+                    <div className="card extra-sl">
+                        <span className="card-title">Service Leave (PL)</span>
+                        <span className="card-days">12 days</span>
+                    </div>
+                    <div className="card maternity">
+                        <span className="card-title">Maternity Leave</span>
+                        <span className="card-days">182 days</span>
                         <img className="card-arrow" src={arrow}></img>
                     </div>
+
                 </div>
+
 
 
             </Box>

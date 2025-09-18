@@ -6,6 +6,7 @@
     max-width: none;
     margin-top: 60px;
     width: 100%;
+    padding-bottom: 20px;
     
 }
 
@@ -93,33 +94,37 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 16px;
-    /* Equivalent to MUI's mb: 2 */
+    margin: 16px;
+   
 }
 
-/* --- Container for the left-side title and icons --- */
+
 .balance-overview-title {
     display: flex;
     align-items: center;
     gap: 8px;
-    /* Equivalent to MUI's gap: 1 */
+    
 }
 
 
-.balance-overview-title h6 {
+.balance-overview-title h2 {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    font-size: 1.25rem;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: 700;
     margin: 0;
-    color: #1D2939;
+    color:#202224;
 }
 
 
-.Leave-Clip-icon,
-.Leave-info-icon {
+.Leave-Clip-icon{
     width: 24px;
     height: 24px;
-    color: #667085;
+    margin-left: 10px;
+}
+.Leave-info-icon {
+    width: 18px;
+    height: 18px;
+    color: #9CA3AF;
 }
 
 .financial-year-selector {
@@ -171,24 +176,27 @@
 .leave-cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 12px;
+    gap: 15px;
     margin-left: 24px;
-    width: 1398px;
+    min-width: 1392px;
     height: 84px;
+    width: 100%;
 }
 
 .card {
     border-radius: 10px;
     width: 186px;
     height: 84px;
-    text-align: left;
-    font-size: 14px;
-    font-weight: 500;
+    margin-right: 10px;
+    gap: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    
     position: relative;
+    display: flex;
+    flex-direction: column;   
+    justify-content: center; 
+    align-items: center;     
+    text-align: start; 
 }
 
 .card-arrow {
@@ -206,11 +214,24 @@
     height: 24px;
     cursor: pointer;
 }
+.card-title {
+    font-size:14px;
+    font-weight: 400;
+    color: #4B5563;
+    
+}
+
+.card-days {
+    font-size: 16px;
+    font-weight: 700; 
+    color: #202224;
+    
+}
 
 /* 🎨 Unique colors for each leave type */
 .cl {
     background: #e8f3ff;
-    /* light blue */
+    margin-left: 20px;
     color: #1976d2;
 }
 

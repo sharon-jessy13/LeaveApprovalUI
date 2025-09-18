@@ -68,8 +68,9 @@ const SpecialLeaveState1 = () => {
                                 </div>
                             </div>
                         </div>
+                         <div className="grid-item col-4"></div>
                         
-                            <div className="grid-item col-6">
+                            <div className="grid-item col-4">
                                 <div className="form-group">
                                     <label className="form-label">Leave Type</label>
                                     <select name="leaveType" value={formData.leaveType} onChange={handleChange}>
@@ -79,7 +80,7 @@ const SpecialLeaveState1 = () => {
                                 </div>
                             </div>
 
-                            <div className="grid-item col-6">
+                            <div className="grid-item col-4">
                                 <div className="form-group">
                                     <label className="form-label">CL for Month</label>
                                     <select name="clMonth" value={formData.clMonth} onChange={handleChange}>
@@ -88,6 +89,7 @@ const SpecialLeaveState1 = () => {
                                     </select>
                                 </div>
                             </div>
+                            <div className="grid-item col-4"></div>
 
                             <div className="grid-item col-4">
                                 <div className="form-group">
@@ -119,14 +121,14 @@ const SpecialLeaveState1 = () => {
                         <div className="grid-item col-12">
                             <div className="form-group">
                                 <label className="form-label">Reason for Leave</label>
-                                <textarea name="reason" value={formData.reason} onChange={handleChange} rows="3"></textarea>
+                                <textarea name="reason"className='special-textarea' value={formData.reason} onChange={handleChange} rows="3"></textarea>
                             </div>
                         </div>
 
                         <div className="grid-item col-12">
                             <div className="form-group">
                                 <label className="form-label">Comment</label>
-                                <textarea name="comment" value={formData.comment} onChange={handleChange} rows="3"></textarea>
+                                <textarea name="comment" className='special-textarea'value={formData.comment} onChange={handleChange} rows="3"></textarea>
                             </div>
                         </div>
                     </div>

@@ -122,6 +122,9 @@ body {
     border-radius: var(--border-radius);
     font-size: 14px;
     box-sizing: border-box;
+    font-weight: 400;
+    color: #000000;
+    
 }
 
 .leaveForm-select,

@@ -136,14 +136,14 @@ const MaternityExtentionState1 = () => {
                         <div className="col-span-12">
                             <div className="maternityExtention-form-group">
                                 <label className="maternityExtention-form-label">Reason for Leave</label>
-                                <textarea name="reason" value={formData.reason} onChange={handleChange} rows="3"></textarea>
+                                <textarea name="reason" className="maternityExtention-textarea" value={formData.reason} onChange={handleChange} rows="3"></textarea>
                             </div>
                         </div>
 
                         <div className="col-span-12">
                             <div className="maternityExtention-form-group">
                                 <label className="maternityExtention-form-label">Comment</label>
-                                <textarea name="comment" value={formData.comment} onChange={handleChange} rows="3"></textarea>
+                                <textarea name="comment" className="maternityExtention-textarea" value={formData.comment} onChange={handleChange} rows="3"></textarea>
                             </div>
                         </div>
                     </div>

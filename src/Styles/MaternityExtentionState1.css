@@ -25,7 +25,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
-    
+    font-weight: 700px;
 }
 .maternityExtention-header-title {
     display: flex;
@@ -35,7 +35,7 @@ body {
 }
 .maternityExtention-header-title h2 {
     margin: 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 700;
 }
 .maternityExtention-header-info {
@@ -44,6 +44,11 @@ body {
     gap: 1.5rem;
     color:#202224;
     font-weight: 700px;
+}
+.maternityExtention-header-info span {
+    color:#000000 ;
+    font-weight: 700px;
+    font-size: 14px;
 }
 .maternityExtention-header-info strong { color: #009951; }
 .note-link { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; }
@@ -72,6 +77,15 @@ body {
     display: flex;
     flex-direction: column;
     gap: 0.5rem; 
+}
+.combined-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 2rem;
+}
+.combined-row > .form-group {
+    flex-grow: 1;
 }
 .maternityExtention-form-label {
     font-weight: 700;
@@ -174,6 +188,9 @@ textarea[name="comment"] {
 }
 
 /* --- Add To Leave List Button --- */
+.maternityExtention-add-btn-container{
+    padding-bottom: 85px;
+}
 .maternityExtention-add-leave-btn {
     background-color: #FFFFFF;
     border: 1px solid var(--border-color);
@@ -188,7 +205,7 @@ textarea[name="comment"] {
     height: 48px;
     width: 180px;
     flex-shrink: 0; 
-    margin-left: 1100px;
+    
 }
 .maternityExtention-add-leave-btn span {
     display: inline-flex;

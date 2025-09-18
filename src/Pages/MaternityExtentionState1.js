@@ -103,24 +103,25 @@ const MaternityExtentionState1 = () => {
                         
                         
                         {/* --- Add to Leave Button Row --- */}
-                        <div className="col-span-12 align-right">
-                             <button type="button" className="maternityExtention-add-leave-btn">
-                                <span>+</span> Add to Leave list
-                            </button>
-                        </div>
-
                         <div className="col-span-12">
-                             <div className="maternityExtention-form-group">
-                                <label className="maternityExtention-form-label">Proof of Maternity Leave Extension <span className="maternityExtention-required">*</span></label>
-                                <div className="maternityExtention-file-upload-area">
-                                    <div>
-                                        <input type="file" id="file-upload" onChange={handleFileChange} style={{ display: 'none' }} />
-                                        <label htmlFor="file-upload" className="maternityExtention-file-upload-label">
-                                            <span>📄 Choose File</span>
-                                        </label>
-                                        <small className="maternityExtention-file-info">PDF format • Max. 4MB</small>
+                            <div className="combined-row">
+                                <div className="maternityExtention-form-group">
+                                    <label className="maternityExtention-form-label">Proof of Maternity Leave Extension <span className="maternityExtention-required">*</span></label>
+                                    <div className="maternityExtention-file-upload-area">
+                                        <div>
+                                            <input type="file" id="file-upload" onChange={handleFileChange} style={{ display: 'none' }} />
+                                            <label htmlFor="file-upload" className="maternityExtention-file-upload-label">
+                                                <span>📄 Choose File</span>
+                                            </label>
+                                            <small className="maternityExtention-file-info">PDF format • Max. 4MB</small>
+                                        </div>
+                                        <button type="button" className="maternityExtention-btn-upload">↑ Upload</button>
                                     </div>
-                                    <button type="button" className="maternityExtention-btn-upload">↑ Upload</button>
+                                </div>
+                                <div className="maternityExtention-add-btn-container">
+                                    <button type="button" className="maternityExtention-add-leave-btn">
+                                        <span>+</span> Add to Leave list
+                                    </button>
                                 </div>
                             </div>
                         </div>

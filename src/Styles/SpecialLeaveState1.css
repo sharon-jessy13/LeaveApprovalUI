@@ -78,7 +78,7 @@ body {
     flex-direction: column;
     gap: 0.5rem;
     width: 415px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .form-label {
     font-weight: 700;
@@ -137,6 +137,7 @@ textarea { height: auto; }
     display: flex;
     align-items: flex-end; /* Aligns button to the bottom */
     height: 100%;
+    padding-bottom: 15px;
 }
 .add-leave-btn {
     background-color: #FFFFFF;
@@ -152,6 +153,7 @@ textarea { height: auto; }
     height: 48px;
     width: 180px;
     flex-shrink: 0;
+   
 }
 .add-leave-btn span {
     display: inline-flex;

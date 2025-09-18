@@ -4,6 +4,8 @@ import Header from '../Components/Header'; // Assuming you have this component
 import Group from '../Assets/Group.svg';
 import note from '../Assets/note.svg';
 import policy from '../Assets/policy.svg';
+import Ellipse from '../Assets/Ellipse.svg';
+import icon from '../Assets/icon.svg';
 
 const MaternityExtentionState1 = () => {
     const [formData, setFormData] = useState({
@@ -46,7 +48,7 @@ const MaternityExtentionState1 = () => {
                         <span>You have <strong>30 Days Leaves</strong> for Maternity Extension</span>
                         <a href="#" className="note-link">
                             <img src={note} alt="Note icon" />
-                            
+
                         </a>
                     </div>
                 </header>
@@ -76,7 +78,7 @@ const MaternityExtentionState1 = () => {
                         </div>
 
                         {/* --- Date Fields Row --- */}
-                        
+
                         <div className="col-span-4">
                             <div className="maternityExtention-form-group">
                                 <label className="maternityExtention-form-label">Leave Type</label>
@@ -100,20 +102,28 @@ const MaternityExtentionState1 = () => {
                                 <input type="date" name="toDate" value={formData.toDate} onChange={handleChange} />
                             </div>
                         </div>
-                        
-                        
-                        {/* --- Add to Leave Button Row --- */}
+
+
+
                         <div className="col-span-12">
                             <div className="combined-row">
                                 <div className="maternityExtention-form-group">
                                     <label className="maternityExtention-form-label">Proof of Maternity Leave Extension <span className="maternityExtention-required">*</span></label>
                                     <div className="maternityExtention-file-upload-area">
-                                        <div>
-                                            <input type="file" id="file-upload" onChange={handleFileChange} style={{ display: 'none' }} />
-                                            <label htmlFor="file-upload" className="maternityExtention-file-upload-label">
-                                                <span>📄 Choose File</span>
-                                            </label>
-                                            <small className="maternityExtention-file-info">PDF format • Max. 4MB</small>
+                                        <div className="file-input-group">
+                                            <div className="upload-icon-wrapper">
+                                                <img src={Ellipse} className='upload-ellipse' alt="Icon background" />
+                                                <img src={icon} className='upload-icon' alt="Upload icon" />
+                                            </div>
+
+                                            
+                                            <div className="file-text-group">
+                                                <input type="file" id="file-upload" onChange={handleFileChange} style={{ display: 'none' }} />
+                                                <label htmlFor="file-upload" className="maternityExtention-file-upload-label">
+                                                    Choose File
+                                                </label>
+                                                <small className="maternityExtention-file-info">PDF format • Max. 4MB</small>
+                                            </div>
                                         </div>
                                         <button type="button" className="maternityExtention-btn-upload">↑ Upload</button>
                                     </div>
@@ -151,14 +161,14 @@ const MaternityExtentionState1 = () => {
                     <hr className="maternityExtention-divider" />
 
                     <footer className="maternityExtention-form-footer">
-                        
+
                         <div className="maternityExtention-footer-buttons">
                             <button type="button" className="maternityExtention-btn maternityExtention-btn-cancel">Cancel</button>
                             <button type="submit" className="maternityExtention-btn maternityExtention-btn-submit">Submit</button>
-                
+
                         </div>
                         <a href="#view-policies" className="maternityExtention-view-policies">
-                            <img src={policy} className="maternityExtention-policy-icon" alt="Policy Icon"></img> 
+                            <img src={policy} className="maternityExtention-policy-icon" alt="Policy Icon"></img>
                             View Policies
                         </a>
                     </footer>

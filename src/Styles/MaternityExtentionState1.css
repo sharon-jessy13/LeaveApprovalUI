@@ -131,7 +131,13 @@ textarea { height: auto; }
 
 }
 .maternityExtention-checkbox-group { flex-direction: row; }
-.maternityExtention-radio-group label,
+.maternityExtention-radio-group label {
+   display: flex;          
+    align-items: center;   
+    gap: 0.5rem;            
+    cursor: pointer;
+    
+}
 .maternityExtention-checkbox-group label {
    display: flex;          
     align-items: center;   
@@ -150,25 +156,63 @@ textarea { height: auto; }
 
 /* --- File Upload --- */
 .maternityExtention-file-upload-area {
-    border: 1.5px dashed #C6C6C6;
-    border-style: dashed;
-    background-color: #f7f9fc;
+    border: 2.5px dashed #C6C6C6;
+    border-spacing: 4px;
+    border-style: dashed ;
+    background-color: #fff;
     border-radius: 8px;
-    padding: 1rem;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 415px;
-    height: 64px;
+    height: 48px; 
+    margin-bottom: 30px;
+}
+.file-input-group {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
 }
 .maternityExtention-file-upload-label {
-    border: 1px solid#38AEE0;
-    color:#38AEE0;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    color:#000000;
     background-color: #fff;
     padding: 8px 12px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 700;
+}
+.upload-icon-wrapper {
+    position: relative;
+    width: 48px;  
+    height: 48px;
+}
+
+.upload-ellipse {
+    width: 100%;
+    height: 100%;
+    
+}
+
+
+.upload-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+
+    
+    width: 24px; 
+    height: 24px;
+}
+.file-text-group {
+    display: flex;
+    flex-direction: column; 
+    
 }
 .maternityExtention-btn-upload {
     background-color: #FFFFFF;
@@ -184,10 +228,11 @@ textarea { height: auto; }
     font-size: 14px;
 }
 .maternityExtention-file-info {
-    font-size: 0.8rem;
-    color: #888;
-    margin-top: 0.5rem;
+    font-size: 14px;
+    color: #98A2B3;
+   
     display: block;
+    font-weight: 400px;
 }
 
 /* --- Add To Leave List Button --- */

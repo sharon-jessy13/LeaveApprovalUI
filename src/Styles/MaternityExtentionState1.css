@@ -1,8 +1,8 @@
 /* --- Main Container & Font --- */
 body {
     background-color: #f0f2f5;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-    
+    font-family: 'Samsung InterFace', BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
     margin: 0;
 }
 
@@ -10,11 +10,11 @@ body {
     background-color: #F9FAFB;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    
-    
+
+
     width: 100%;
-    min-width:1392px;
-    
+    min-width: 1392px;
+
     padding: 24px;
     box-sizing: border-box;
 }
@@ -27,31 +27,45 @@ body {
     padding-bottom: 16px;
     font-weight: 700;
 }
+
 .maternityExtention-header-title {
     display: flex;
     align-items: center;
     gap: 0.75rem;
     color: #202224;
 }
+
 .maternityExtention-header-title h2 {
     margin: 0;
     font-size: 16px;
     font-weight: 700;
 }
+
 .maternityExtention-header-info {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    color:#202224;
+    color: #202224;
     font-weight: 700px;
 }
+
 .maternityExtention-header-info span {
-    color:#000000 ;
+    color: #000000;
     font-weight: 700px;
     font-size: 14px;
 }
-.maternityExtention-header-info strong { color: #009951; }
-.note-link { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; }
+
+.maternityExtention-header-info strong {
+    color: #009951;
+}
+
+.note-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: inherit;
+}
 
 /* --- Form Layout & Grid System --- */
 .maternityExtention-leave-form {
@@ -59,43 +73,124 @@ body {
     flex-direction: column;
     gap: 24px;
 }
+
 .maternityExtention-form-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 24px 32px;
     max-width: 1270px;
 }
-/* Column span classes are necessary for the grid */
-.col-span-3 { grid-column: span 3; }
-.col-span-4 { grid-column: span 4; }
-.col-span-6 { grid-column: span 6; }
-.col-span-12 { grid-column: span 12; }
-.align-right { text-align: right; } 
+
+.custom-select {
+ 
+  appearance: none;
+  -webkit-appearance: none;
+  
+  
+  background-image: url("../Assets/Vector.svg");
+  
+
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 1em;
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+}
+
+
+/* Style the input field itself */
+.custom-date-input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  
+  /* Add your custom calendar icon as a background image */
+  background-image: url("../Assets/Right Content.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 1.1em;
+}
+
+/* This is the key: Hide the browser's default calendar icon */
+.custom-date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* Add a focus style for accessibility */
+.custom-date-input:focus {
+  outline: none;
+  /* border-color: #007bff; */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+
+.custom-date-input:focus {
+  
+  outline: 0;
+ 
+}
+
+
+.col-span-3 {
+    grid-column: span 3;
+}
+
+.col-span-4 {
+    grid-column: span 4;
+}
+
+.col-span-6 {
+    grid-column: span 6;
+}
+
+.col-span-12 {
+    grid-column: span 12;
+}
+
+.align-right {
+    text-align: right;
+}
 
 /* --- Form Groups & Labels --- */
 .maternityExtention-form-group {
     display: flex;
     flex-direction: column;
-    gap: 0.5rem; 
+    gap: 0.5rem;
 }
+
 .combined-row {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     gap: 2rem;
 }
-.combined-row > .form-group {
+
+.combined-row>.form-group {
     flex-grow: 1;
 }
+
 .maternityExtention-form-label {
     font-weight: 700;
     font-size: 14px;
     color: #202224;
 }
-.maternityExtention-required { color: #d9534f; }
+
+.maternityExtention-required {
+    color: #d9534f;
+}
 
 
-input, select, textarea {
+input,
+select,
+textarea {
     padding: 16px;
     border: 1px solid var(--border-color);
     border-radius: var(--border-radius);
@@ -104,10 +199,9 @@ input, select, textarea {
     width: 416px;
     height: 48px;
 }
-textarea { height: auto; }
-.maternityExtention-textarea {
-    width: 1390px;
-    height: 90px;
+
+textarea {
+    height: auto;
 }
 
 
@@ -117,10 +211,20 @@ textarea { height: auto; }
     font-size: 14px;
     font-weight: 400;
     color: #000000;
+    resize: vertical;
+    padding-top: 36px;
 }
 
 /* --- Radio & Checkbox Buttons --- */
-.maternityExtention-radio-group,
+.maternityExtention-radio-group {
+   display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+}
+
 .maternityExtention-checkbox-group {
     display: flex;
     align-items: center;
@@ -130,35 +234,83 @@ textarea { height: auto; }
     color: #000000;
 
 }
-.maternityExtention-checkbox-group { flex-direction: row; }
-.maternityExtention-radio-group label {
-   display: flex;          
-    align-items: center;   
-    gap: 0.5rem;            
-    cursor: pointer;
-    
-}
-.maternityExtention-checkbox-group label {
-   display: flex;          
-    align-items: center;   
-    gap: 0.5rem;            
-    cursor: pointer;
+
+.maternityExtention-checkbox-group {
+    flex-direction: row;
 }
 
-.maternityExtention-radio-group input[type="radio"],
 .maternityExtention-checkbox-group input[type="checkbox"] {
-    
-    width: 16px;  /* Adjust size as needed */
-    height: 16px; /* Adjust size as needed*/
- 
+    width: 16px;
+
+    height: 16px;
+
 }
 
+.maternityExtention-checkbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+
+}
+
+.maternityExtention-radio-group input[type="radio"] {
+    width: 16px;
+
+    height: 16px;
+}
+
+.maternityExtention-radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+}
+
+/* .maternityExtention-radio-group label::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #D0D5DD;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.2s ease;
+}
+
+.maternityExtention-radio-group label::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #38AEE0;
+    border-radius: 50%;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.2s ease;
+    
+}
+
+.maternityExtention-radio-group input[type="radio"]:checked + label::before {
+    border-color: #38AEE0;
+}
+
+.maternityExtention-radio-group input[type="radio"]:checked + label::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.maternityExtention-radio-group input[type="radio"]:focus + label::before {
+    box-shadow: 0 0 0 3px rgba(56, 174, 224, 0.3);
+} */
 
 /* --- File Upload --- */
 .maternityExtention-file-upload-area {
     border: 2.5px dashed #C6C6C6;
     border-spacing: 4px;
-    border-style: dashed ;
+    border-style: dashed;
     background-color: #fff;
     border-radius: 8px;
     padding: 10px;
@@ -166,36 +318,39 @@ textarea { height: auto; }
     justify-content: space-between;
     align-items: center;
     width: 415px;
-    height: 48px; 
+    height: 48px;
     margin-bottom: 30px;
 }
+
 .file-input-group {
     display: flex;
     align-items: center;
-    gap: 10px; 
+    gap: 10px;
 }
+
 .maternityExtention-file-upload-label {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 14px;
-    color:#000000;
+    color: #000000;
     background-color: #fff;
     padding: 8px 12px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 700;
 }
+
 .upload-icon-wrapper {
     position: relative;
-    width: 48px;  
+    width: 48px;
     height: 48px;
 }
 
 .upload-ellipse {
     width: 100%;
     height: 100%;
-    
+
 }
 
 
@@ -203,42 +358,52 @@ textarea { height: auto; }
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 
-    
-    width: 24px; 
+
+    width: 24px;
     height: 24px;
 }
+
 .file-text-group {
     display: flex;
-    flex-direction: column; 
-    
+    flex-direction: column;
+
 }
+
 .maternityExtention-btn-upload {
     background-color: #FFFFFF;
-    border:1px solid #38AEE0;
-    color:#38AEE0;
-    padding:8px 12px;
+    border: 1px solid #38AEE0;
+    color: #38AEE0;
+    padding: 6px 12px;
     border-radius: 6px;
     cursor: pointer;
     font-weight: 700;
     height: 36px;
-    align-items: center;
-    gap: 10px;
     font-size: 14px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    gap: 8px; 
+    font-family: 'Samsung InterFace', sans-serif;
+}
+.maternityExtention-btn-upload .upload-arrow {
+  width: 20px;
+  height: 20px;
 }
 .maternityExtention-file-info {
     font-size: 14px;
     color: #98A2B3;
-   
+
     display: block;
     font-weight: 400px;
 }
 
 /* --- Add To Leave List Button --- */
-.maternityExtention-add-btn-container{
+.maternityExtention-add-btn-container {
     padding-bottom: 85px;
 }
+
 .maternityExtention-add-leave-btn {
     background-color: #FFFFFF;
     border: 1px solid var(--border-color);
@@ -252,9 +417,10 @@ textarea { height: auto; }
     gap: 0.5rem;
     height: 48px;
     width: 180px;
-    flex-shrink: 0; 
-    
+    flex-shrink: 0;
+
 }
+
 .maternityExtention-add-leave-btn span {
     display: inline-flex;
     align-items: center;
@@ -272,12 +438,14 @@ textarea { height: auto; }
     background-color: #e0e0e0;
     margin-top: 1rem;
 }
+
 .maternityExtention-form-footer {
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding-top: 1.5rem;
 }
+
 .maternityExtention-view-policies {
     display: flex;
     align-items: center;
@@ -287,11 +455,13 @@ textarea { height: auto; }
     font-weight: 500;
     align-self: flex-start;
 }
+
 .maternityExtention-footer-buttons {
     display: flex;
     gap: 1rem;
     align-self: flex-end;
 }
+
 .maternityExtention-btn {
     padding: 0.6rem 1.5rem;
     border-radius: var(--border-radius);
@@ -300,11 +470,13 @@ textarea { height: auto; }
     font-weight: 600;
     cursor: pointer;
 }
+
 .maternityExtention-btn-cancel {
     background-color: #fff;
     border-color: #38AEE0;
     color: #38AEE0;
 }
+
 .maternityExtention-btn-submit {
     background-color: #38AEE0;
     border-color: #38AEE0;
@@ -314,11 +486,29 @@ textarea { height: auto; }
 
 /* --- RESPONSIVE ADJUSTMENTS --- */
 @media (max-width: 1200px) {
-    .maternityExtention-form-grid { grid-template-columns: repeat(6, 1fr); }
-    .col-span-3, .col-span-4 { grid-column: span 3; }
-    .col-span-12 { grid-column: span 6; }
+    .maternityExtention-form-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .col-span-3,
+    .col-span-4 {
+        grid-column: span 3;
+    }
+
+    .col-span-12 {
+        grid-column: span 6;
+    }
 }
+
 @media (max-width: 768px) {
-    .maternityExtention-form-grid { grid-template-columns: 1fr; }
-    .col-span-3, .col-span-4, .col-span-6, .col-span-12 { grid-column: span 1; }
+    .maternityExtention-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .col-span-3,
+    .col-span-4,
+    .col-span-6,
+    .col-span-12 {
+        grid-column: span 1;
+    }
 }

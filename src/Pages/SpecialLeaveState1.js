@@ -73,7 +73,7 @@ const SpecialLeaveState1 = () => {
                             <div className="grid-item col-4">
                                 <div className="form-group">
                                     <label className="form-label">Leave Type</label>
-                                    <select name="leaveType" value={formData.leaveType} onChange={handleChange}>
+                                    <select name="leaveType" className='special-dropdown' value={formData.leaveType} onChange={handleChange}>
                                         <option>Special Leave for Women</option>
                                         <option>Paternity Leave</option>
                                     </select>
@@ -83,7 +83,7 @@ const SpecialLeaveState1 = () => {
                             <div className="grid-item col-4">
                                 <div className="form-group">
                                     <label className="form-label">CL for Month</label>
-                                    <select name="clMonth" value={formData.clMonth} onChange={handleChange}>
+                                    <select name="clMonth" className='special-dropdown' value={formData.clMonth} onChange={handleChange}>
                                         <option>March</option>
                                         <option>April</option>
                                     </select>
@@ -94,14 +94,14 @@ const SpecialLeaveState1 = () => {
                             <div className="grid-item col-4">
                                 <div className="form-group">
                                     <label className="form-label">From Date</label>
-                                    <input type="date" name="fromDate" value={formData.fromDate} onChange={handleChange} />
+                                    <input type="date" name="fromDate" className='special-custom-date-input' value={formData.fromDate} onChange={handleChange} />
                                 </div>
                             </div>
 
                             <div className="grid-item col-4">
                                 <div className="form-group">
                                     <label className="form-label">To Date</label>
-                                    <input type="date" name="toDate" value={formData.toDate} onChange={handleChange} />
+                                    <input type="date" name="toDate" className='special-custom-date-input' value={formData.toDate} onChange={handleChange} />
                                 </div>
                             </div>
 

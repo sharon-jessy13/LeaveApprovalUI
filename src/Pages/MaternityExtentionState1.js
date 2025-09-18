@@ -6,6 +6,8 @@ import note from '../Assets/note.svg';
 import policy from '../Assets/policy.svg';
 import Ellipse from '../Assets/Ellipse.svg';
 import icon from '../Assets/icon.svg';
+import vector from '../Assets/Vector.svg';
+import uploadIcon from '../Assets/button-icon.svg'
 
 const MaternityExtentionState1 = () => {
     const [formData, setFormData] = useState({
@@ -60,8 +62,10 @@ const MaternityExtentionState1 = () => {
                             <div className="maternityExtention-form-group">
                                 <label className="maternityExtention-form-label">Request Type</label>
                                 <div className="maternityExtention-radio-group">
-                                    <label><input type="radio" name="requestType" value="apply" checked={formData.requestType === 'apply'} onChange={handleChange} /> Apply Leave</label>
-                                    <label><input type="radio" name="requestType" value="cancel" checked={formData.requestType === 'cancel'} onChange={handleChange} /> Cancel Leave</label>
+                                    <input type="radio" id="applyLeave" name="requestType" value="apply" checked={formData.requestType === 'apply'} onChange={handleChange} />
+                                    <label htmlFor="applyLeave">Apply Leave</label>
+                                    <input type="radio" id="cancelLeave" name="requestType" value="cancel" checked={formData.requestType === 'cancel'} onChange={handleChange} />
+                                    <label htmlFor="cancelLeave">Cancel Leave</label>
                                 </div>
                             </div>
                         </div>
@@ -82,7 +86,7 @@ const MaternityExtentionState1 = () => {
                         <div className="col-span-4">
                             <div className="maternityExtention-form-group">
                                 <label className="maternityExtention-form-label">Leave Type</label>
-                                <select name="leaveType" value={formData.leaveType} onChange={handleChange}>
+                                <select name="leaveType"className="custom-select"  value={formData.leaveType} onChange={handleChange}>
                                     <option>Maternity Extension</option>
                                     <option>Paternity Leave</option>
                                 </select>
@@ -91,15 +95,16 @@ const MaternityExtentionState1 = () => {
 
                         <div className="col-span-4">
                             <div className="maternityExtention-form-group">
-                                <label className="maternityExtention-form-label">From Date</label>
-                                <input type="date" name="fromDate" value={formData.fromDate} onChange={handleChange} />
+                                <label htmlFor="fromDate" className="maternityExtention-form-label">From Date</label>
+                                <input type="date" id="fromDate" name="fromDate" className="custom-date-input" value={formData.fromDate} onChange={handleChange} />
+                                
                             </div>
                         </div>
 
                         <div className="col-span-4">
                             <div className="maternityExtention-form-group">
                                 <label className="maternityExtention-form-label">To Date</label>
-                                <input type="date" name="toDate" value={formData.toDate} onChange={handleChange} />
+                                <input type="date" name="toDate" className="custom-date-input" value={formData.toDate} onChange={handleChange} />
                             </div>
                         </div>
 
@@ -116,7 +121,7 @@ const MaternityExtentionState1 = () => {
                                                 <img src={icon} className='upload-icon' alt="Upload icon" />
                                             </div>
 
-                                            
+
                                             <div className="file-text-group">
                                                 <input type="file" id="file-upload" onChange={handleFileChange} style={{ display: 'none' }} />
                                                 <label htmlFor="file-upload" className="maternityExtention-file-upload-label">
@@ -125,7 +130,9 @@ const MaternityExtentionState1 = () => {
                                                 <small className="maternityExtention-file-info">PDF format • Max. 4MB</small>
                                             </div>
                                         </div>
-                                        <button type="button" className="maternityExtention-btn-upload">↑ Upload</button>
+                                        <button type="button" className="maternityExtention-btn-upload">
+                                            <img src={uploadIcon} alt="Upload" className="upload-arrow" />
+                                             Upload</button>
                                     </div>
                                 </div>
                                 <div className="maternityExtention-add-btn-container">

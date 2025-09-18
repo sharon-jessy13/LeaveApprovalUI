@@ -137,6 +137,59 @@ textarea { height: auto; }
     /* Adjust size as needed*/
 }
 
+.special-dropdown {
+ 
+  appearance: none;
+  -webkit-appearance: none;
+  
+  
+  background-image: url("../Assets/Vector.svg");
+  
+
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  background-size: 1em;
+  width: 100%;
+  padding: 12px 40px 12px 16px;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+}
+.special-custom-date-input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  
+  /* Add your custom calendar icon as a background image */
+  background-image: url("../Assets/Right Content.svg");
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 1.1em;
+}
+
+/* This is the key: Hide the browser's default calendar icon */
+.special-custom-date-input::-webkit-calendar-picker-indicator {
+  opacity: 0;
+}
+
+/* Add a focus style for accessibility */
+.special-custom-date-input:focus {
+  outline: none;
+  /* border-color: #007bff; */
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+
+.special-custom-date-input:focus {
+  
+  outline: 0;
+ 
+}
 /* --- Add To Leave List Button --- */
 .add-btn-container {
     display: flex;
@@ -175,6 +228,8 @@ textarea { height: auto; }
     font-size: 14px;
     font-weight: 400;
     color: #000000;
+    resize: vertical;
+    padding-top: 36px;
 }
 
 /* --- Footer --- */

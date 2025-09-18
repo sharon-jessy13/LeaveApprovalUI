@@ -1,0 +1,221 @@
+/* --- Global Styles --- */
+body {
+    background-color: #f0f2f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    
+    margin: 0;
+}
+
+/* --- Main Container --- */
+.form-container {
+    background-color: #F9FAFB;
+    border-radius: 8px;
+   
+    
+    min-width: 1392px;
+    width: 100%;
+    
+}
+
+/* --- Form Header --- */
+.form-header-special {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+   
+}
+.form-header-title h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+.form-header-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #202224;
+}
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #555;
+}
+
+/* --- Form Layout & Grid System --- */
+.leave-form {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0.5rem ;
+}
+/* These helper classes are necessary for the grid */
+.grid-item { box-sizing: border-box; }
+.col-4 { grid-column: span 4; }
+.col-6 { grid-column: span 6; }
+.col-12 { grid-column: span 12; }
+
+/* --- Form Groups & Labels --- */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 415px;
+    margin-bottom: 20px;
+}
+.form-label {
+    font-weight: 700;
+    font-size:14px;
+    font-style: bold;
+    color: #101928;
+}
+
+
+/* --- Form Controls --- */
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+    width: 100%; 
+    height: 48px;
+    padding: 0.6rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+textarea { height: auto; }
+
+/* --- Radio & Checkbox --- */
+.radio-group {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+.radio-group label, .form-groupcheckbox-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.form-group-checkbox-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.form-group-checkbox-group input {  
+   width: 16px; 
+   height: 16px;
+    
+}
+.radio-group input[type="radio"]{
+    width: 16px;
+    /* Adjust size as needed */
+    height: 16px;
+    /* Adjust size as needed*/
+}
+
+/* --- Add To Leave List Button --- */
+.add-btn-container {
+    display: flex;
+    align-items: flex-end; /* Aligns button to the bottom */
+    height: 100%;
+}
+.add-leave-btn {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    color: var(--primary-theme-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 48px;
+    width: 180px;
+    flex-shrink: 0;
+}
+.add-leave-btn span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--primary-theme-color);
+    border-radius: 50%;
+}
+
+/* --- Footer --- */
+.form-divider {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+}
+.form-footer {
+     display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+.view-policies {
+   display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #606060;
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+}
+.footer-buttons {
+    display: flex;
+    gap: 1rem;
+    align-self: flex-end;
+}
+.btn {
+   padding: 0.6rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-theme-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn-secondary {
+    background-color: #fff;
+    border-color: #38AEE0;
+    color: #38AEE0;
+}
+.btn-primary {
+  background-color: #38AEE0;
+    border-color: #38AEE0;
+    color: #fff;
+    margin-right: 25px;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 1200px) {
+    .form-grid { grid-template-columns: repeat(6, 1fr); }
+    .col-4 { grid-column: span 4; }
+    .col-12 { grid-column: span 6; }
+}
+@media (max-width: 768px) {
+    .form-grid { grid-template-columns: 1fr; }
+    .col-4, .col-6, .col-12 { grid-column: span 1; }
+}

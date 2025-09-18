@@ -1,0 +1,250 @@
+.hr-header-container {
+    padding-left: 0;
+    padding-right: 32px;
+    background-color: #fff;
+    min-width: 1446px;
+    max-width: none;
+    margin-top: 60px;
+    width: 100%;
+    
+}
+
+.breadcrumb {
+    color: #202224;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-left: 24px !important;
+}
+
+.header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.initiate-text {
+    color: gray;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.clock-icon {
+    color: #00b0ff;
+}
+
+.employee-grid {
+    margin-top: 20px;
+}
+
+.employee-section {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-left: 24px;
+}
+
+/* Add left margin only for the employee details block */
+.employee-details {
+    margin-left: 15px;
+}
+
+.divider {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    border-color: #e0e0e0;
+}
+
+.required-info-section {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 24px 0 8px 0;
+    margin-left: 12px;
+    /* left margin for Required Information */
+}
+
+.employee-details {
+    display: flex;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.employee-info {
+    margin: 15px;
+}
+
+.avatar-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    /* border-radius: 50%; */
+    object-fit: cover;
+    display: block;
+}
+
+/* --- Main container for the header row --- */
+.balance-overview-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    /* Equivalent to MUI's mb: 2 */
+}
+
+/* --- Container for the left-side title and icons --- */
+.balance-overview-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Equivalent to MUI's gap: 1 */
+}
+
+
+.balance-overview-title h6 {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+    color: #1D2939;
+}
+
+
+.Leave-Clip-icon,
+.Leave-info-icon {
+    width: 24px;
+    height: 24px;
+    color: #667085;
+}
+
+.financial-year-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: Arial, sans-serif;
+    border-radius: 6px;
+    border: 1px solid #E8E7E3;
+    padding: 5px 10px;
+}
+
+
+.financial-year-label {
+    color: #202224;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+.radio-group-horizontal {
+    display: flex;
+    gap: 10px;
+}
+
+.radio-group-horizontal input[type="radio"] {
+    width: 16px;
+    /* Adjust size as needed */
+    height: 16px;
+    /* Adjust size as needed*/
+}
+
+
+
+.radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.radio-text {
+    margin-left: 8px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #202224;
+}
+
+.leave-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-left: 24px;
+    width: 1398px;
+    height: 84px;
+}
+
+.card {
+    border-radius: 10px;
+    width: 186px;
+    height: 84px;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.card-arrow {
+
+    position: absolute;
+
+
+    top: 50%;
+    right: -12px;
+
+    transform: translateY(-50%);
+
+
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* 🎨 Unique colors for each leave type */
+.cl {
+    background: #e8f3ff;
+    /* light blue */
+    color: #1976d2;
+}
+
+.sl {
+    background: #f3e8ff;
+    /* lavender */
+    color: #6a1b9a;
+}
+
+.pl {
+    background: #fff3e0;
+    /* peach */
+    color: #ef6c00;
+}
+
+.wfh {
+    background: #f0fdf4;
+    /* mint green */
+    color: #2e7d32;
+}
+
+.long-sl {
+    background: #ede7f6;
+    /* purple tint */
+    color: #4527a0;
+}
+
+.extra-sl {
+    background: #e0f7fa;
+    /* aqua */
+    color: #00695c;
+}
+
+.maternity {
+    background: #fff8e1;
+    color: #f9a825;
+}

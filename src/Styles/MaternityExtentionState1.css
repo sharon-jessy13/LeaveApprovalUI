@@ -1,0 +1,259 @@
+/* --- Main Container & Font --- */
+body {
+    background-color: #f0f2f5;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    
+    margin: 0;
+}
+
+.maternityExtention-form-container {
+    background-color: #F9FAFB;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    
+    
+    width: 100%;
+    min-width:1392px;
+    
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+/* --- Form Header --- */
+.maternityExtention-form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 16px;
+    
+}
+.maternityExtention-header-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #202224;
+}
+.maternityExtention-header-title h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 700;
+}
+.maternityExtention-header-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    color:#202224;
+    font-weight: 700px;
+}
+.maternityExtention-header-info strong { color: #009951; }
+.note-link { display: flex; align-items: center; gap: 8px; text-decoration: none; color: inherit; }
+
+/* --- Form Layout & Grid System --- */
+.maternityExtention-leave-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.maternityExtention-form-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px 32px;
+    max-width: 1270px;
+}
+/* Column span classes are necessary for the grid */
+.col-span-3 { grid-column: span 3; }
+.col-span-4 { grid-column: span 4; }
+.col-span-6 { grid-column: span 6; }
+.col-span-12 { grid-column: span 12; }
+.align-right { text-align: right; } 
+
+/* --- Form Groups & Labels --- */
+.maternityExtention-form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; 
+}
+.maternityExtention-form-label {
+    font-weight: 700;
+    font-size: 14px;
+    color: #202224;
+}
+.maternityExtention-required { color: #d9534f; }
+
+
+input, select, textarea {
+    padding: 16px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+    font-size: 14px;
+    box-sizing: border-box;
+    width: 416px;
+    height: 48px;
+}
+textarea { height: auto; }
+textarea[name="reason"] {
+    width: 1390px;
+    height: 90px;
+}
+
+
+textarea[name="comment"] {
+    width: 1390px;
+    height: 90px;
+}
+
+/* --- Radio & Checkbox Buttons --- */
+.maternityExtention-radio-group,
+.maternityExtention-checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000000;
+
+}
+.maternityExtention-checkbox-group { flex-direction: row; }
+.maternityExtention-radio-group label,
+.maternityExtention-checkbox-group label {
+   display: flex;          
+    align-items: center;   
+    gap: 0.5rem;            
+    cursor: pointer;
+}
+
+.maternityExtention-radio-group input[type="radio"],
+.maternityExtention-checkbox-group input[type="checkbox"] {
+    
+    width: 16px;  /* Adjust size as needed */
+    height: 16px; /* Adjust size as needed*/
+ 
+}
+
+
+/* --- File Upload --- */
+.maternityExtention-file-upload-area {
+    border: 1.5px dashed #C6C6C6;
+    border-style: dashed;
+    background-color: #f7f9fc;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 415px;
+    height: 64px;
+}
+.maternityExtention-file-upload-label {
+    border: 1px solid#38AEE0;
+    color:#38AEE0;
+    background-color: #fff;
+    padding: 8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+}
+.maternityExtention-btn-upload {
+    background-color: #FFFFFF;
+    border:1px solid #38AEE0;
+    color:#38AEE0;
+    padding:8px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 700;
+    height: 36px;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+.maternityExtention-file-info {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 0.5rem;
+    display: block;
+}
+
+/* --- Add To Leave List Button --- */
+.maternityExtention-add-leave-btn {
+    background-color: #FFFFFF;
+    border: 1px solid var(--border-color);
+    color: var(--primary-theme-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    height: 48px;
+    width: 180px;
+    flex-shrink: 0; 
+    margin-left: 1100px;
+}
+.maternityExtention-add-leave-btn span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--primary-theme-color);
+    border-radius: 50%;
+}
+
+/* --- Footer --- */
+.maternityExtention-divider {
+    border: none;
+    height: 1px;
+    background-color: #e0e0e0;
+    margin-top: 1rem;
+}
+.maternityExtention-form-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 1.5rem;
+}
+.maternityExtention-view-policies {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #606060;
+    text-decoration: none;
+    font-weight: 500;
+    align-self: flex-start;
+}
+.maternityExtention-footer-buttons {
+    display: flex;
+    gap: 1rem;
+    align-self: flex-end;
+}
+.maternityExtention-btn {
+    padding: 0.6rem 1.5rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--primary-theme-color);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+.maternityExtention-btn-cancel {
+    background-color: #fff;
+    border-color: #38AEE0;
+    color: #38AEE0;
+}
+.maternityExtention-btn-submit {
+    background-color: #38AEE0;
+    border-color: #38AEE0;
+    color: #fff;
+    margin-right: 25px;
+}
+
+/* --- RESPONSIVE ADJUSTMENTS --- */
+@media (max-width: 1200px) {
+    .maternityExtention-form-grid { grid-template-columns: repeat(6, 1fr); }
+    .col-span-3, .col-span-4 { grid-column: span 3; }
+    .col-span-12 { grid-column: span 6; }
+}
+@media (max-width: 768px) {
+    .maternityExtention-form-grid { grid-template-columns: 1fr; }
+    .col-span-3, .col-span-4, .col-span-6, .col-span-12 { grid-column: span 1; }
+}

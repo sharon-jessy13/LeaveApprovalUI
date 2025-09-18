@@ -1,24 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Navbar from './Components/Navbar';
+import PaternityLeaveState1 from './Pages/PaternityLeaveState1';
+import MaternityExtentionState1 from './Pages/MaternityExtentionState1';
+import SpecialLeaveState1 from './Pages/SpecialLeaveState1';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+       
+        <Route path="/paternity-leave" element={<PaternityLeaveState1 />} />
+        <Route path="/special-leave" element={<SpecialLeaveState1 />} />
+        <Route path="/maternity-extension" element={<MaternityExtentionState1 />} />
+        
+      </Routes>
+    </BrowserRouter>
   );
 }
 

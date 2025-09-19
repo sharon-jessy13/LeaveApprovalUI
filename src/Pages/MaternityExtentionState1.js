@@ -74,9 +74,12 @@ const MaternityExtentionState1 = () => {
                             <div className="maternityExtention-form-group">
                                 <label className="maternityExtention-form-label">Day Type</label>
                                 <div className="maternityExtention-radio-group">
-                                    <label><input type="radio" name="dayType" value="full" checked={formData.dayType === 'full'} onChange={handleChange} /> Full day (s)</label>
-                                    <label><input type="radio" name="dayType" value="first" checked={formData.dayType === 'first'} onChange={handleChange} /> First Half</label>
-                                    <label><input type="radio" name="dayType" value="second" checked={formData.dayType === 'second'} onChange={handleChange} /> Second Half</label>
+                                    <input type="radio" name="dayType" id='Fullday' value="full" checked={formData.dayType === 'full'} onChange={handleChange} />
+                                    <label htmlFor="Fullday"> Full day (s)</label>
+                                    <input type="radio" name="dayType"id='Firsthalf' value="first" checked={formData.dayType === 'first'} onChange={handleChange} />
+                                    <label htmlFor="Firsthalf"> First Half</label>
+                                    <input type="radio" name="dayType" id='Secondhalf' value="second" checked={formData.dayType === 'second'} onChange={handleChange} />
+                                    <label htmlFor="Secondhalf"> Second Half</label>
                                 </div>
                             </div>
                         </div>
@@ -174,10 +177,10 @@ const MaternityExtentionState1 = () => {
                             <button type="submit" className="maternityExtention-btn maternityExtention-btn-submit">Submit</button>
 
                         </div>
-                        <a href="#view-policies" className="maternityExtention-view-policies">
+                        {/* <a href="#view-policies" className="maternityExtention-view-policies">
                             <img src={policy} className="maternityExtention-policy-icon" alt="Policy Icon"></img>
                             View Policies
-                        </a>
+                        </a> */}
                     </footer>
                 </form>
             </div>

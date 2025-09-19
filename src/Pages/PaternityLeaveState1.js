@@ -43,17 +43,22 @@ const PaternityLeaveState1 = () => {
             <div className="leaveForm-fieldGroup leaveForm-col-span-2">
               <label className="leaveForm-label">Request Type</label>
               <div className="leaveForm-radioGroup">
-                <label><input type="radio" name="requestType" value="apply" checked={requestType === 'apply'} onChange={(e) => setRequestType(e.target.value)} /> Apply Leave</label>
-                <label><input type="radio" name="requestType" value="cancel" checked={requestType === 'cancel'} onChange={(e) => setRequestType(e.target.value)} /> Cancel Leave</label>
+                <input type="radio" name="requestType" id='applyLeave' value="apply" checked={requestType === 'apply'} onChange={(e) => setRequestType(e.target.value)} />
+                <label htmlFor='applyLeave'> Apply Leave</label>
+                <input type="radio" name="requestType"id='cancelLeave' value="cancel" checked={requestType === 'cancel'} onChange={(e) => setRequestType(e.target.value)} /> 
+                <label htmlFor='cancelLeave'>Cancel Leave</label>
               </div>
             </div>
 
             <div className="leaveForm-fieldGroup leaveForm-col-span-3">
               <label className="leaveForm-label">Day Type</label>
               <div className="leaveForm-radioGroup">
-                <label><input type="radio" name="dayType" value="full" checked={dayType === 'full'} onChange={(e) => setDayType(e.target.value)} /> Full day(s)</label>
-                <label><input type="radio" name="dayType" value="first" checked={dayType === 'first'} onChange={(e) => setDayType(e.target.value)} /> First Half</label>
-                <label><input type="radio" name="dayType" value="second" checked={dayType === 'second'} onChange={(e) => setDayType(e.target.value)} /> Second Half</label>
+                <input type="radio" name="dayType"id='FullDay' value="full" checked={dayType === 'full'} onChange={(e) => setDayType(e.target.value)} />
+                <label htmlFor='FullDay'> Full day(s)</label>
+                <input type="radio" name="dayType"id='Firsthalf' value="first" checked={dayType === 'first'} onChange={(e) => setDayType(e.target.value)} />
+                <label htmlFor='Firsthalf'> First Half</label>
+                <input type="radio" name="dayType"id='Secondhalf' value="second" checked={dayType === 'second'} onChange={(e) => setDayType(e.target.value)} />
+                <label htmlFor='Secondhalf'> Second Half</label>
               </div>
             </div>
 
@@ -115,10 +120,10 @@ const PaternityLeaveState1 = () => {
               <button type="submit" className="leaveForm-button leaveForm-button-submit">Submit</button>
             </div>
 
-            <a href="#" className="leaveForm-viewPoliciesLink">
+            {/* <a href="#" className="leaveForm-viewPoliciesLink">
               <img src={policy} className="policy-icon" alt="Policy Icon" />
               View Policies
-            </a>
+            </a> */}
           </footer>
         </form>
       </div>

@@ -52,9 +52,10 @@ const SpecialLeaveState1 = () => {
                             <div className="form-group">
                                 <label className="form-label">Request Type</label>
                                 <div className="radio-group">
-                                    <label><input type="radio" name="requestType" value="apply" checked={formData.requestType === 'apply'} onChange={handleChange} /> Apply Leave</label>
-                                    <label><input type="radio" name="requestType" value="cancel" checked={formData.requestType === 'cancel'} onChange={handleChange} /> Cancel Leave</label>
-                                </div>
+                                    <input type="radio" id="applyLeave" name="requestType" value="apply" checked={formData.requestType === 'apply'} onChange={handleChange} />
+                                    <label htmlFor="applyLeave">Apply Leave</label>
+                                    <input type="radio" id="cancelLeave" name="requestType" value="cancel" checked={formData.requestType === 'cancel'} onChange={handleChange} />
+                                    <label htmlFor="cancelLeave">Cancel Leave</label></div>
                             </div>
                         </div>
 
@@ -62,10 +63,13 @@ const SpecialLeaveState1 = () => {
                             <div className="form-group">
                                 <label className="form-label">Day Type</label>
                                 <div className="radio-group">
-                                    <label><input type="radio" name="dayType" value="full" checked={formData.dayType === 'full'} onChange={handleChange} /> Full day (s)</label>
-                                    <label><input type="radio" name="dayType" value="first" checked={formData.dayType === 'first'} onChange={handleChange} /> First Half</label>
-                                    <label><input type="radio" name="dayType" value="second" checked={formData.dayType === 'second'} onChange={handleChange} /> Second Half</label>
-                                </div>
+                                    <input type="radio" name="dayType" id='Fullday' value="full" checked={formData.dayType === 'full'} onChange={handleChange} />
+                                    <label htmlFor="Fullday"> Full day (s)</label>
+                                    <input type="radio" name="dayType"id='Firsthalf' value="first" checked={formData.dayType === 'first'} onChange={handleChange} />
+                                    <label htmlFor="Firsthalf"> First Half</label>
+                                    <input type="radio" name="dayType" id='Secondhalf' value="second" checked={formData.dayType === 'second'} onChange={handleChange} />
+                                    <label htmlFor="Secondhalf"> Second Half</label> 
+                                    </div>
                             </div>
                         </div>
                          <div className="grid-item col-4"></div>
@@ -141,8 +145,8 @@ const SpecialLeaveState1 = () => {
                             <button type="button" className="btn btn-secondary">Cancel</button>
                             <button type="submit" className="btn btn-primary">Submit</button>
                         </div>
-                         <a href="#view-policies" className="view-policies">
-                            <img src={policy} className='footer-policy'/> View Policies</a>
+                         {/* <a href="#view-policies" className="view-policies">
+                            <img src={policy} className='footer-policy'/> View Policies</a> */}
                     </footer>
                 </form>
             </div>
